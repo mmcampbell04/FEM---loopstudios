@@ -1,0 +1,51 @@
+@use "../utils/" as *;
+
+// GENERAL
+.flex {
+  display: flex;
+}
+
+.btwn {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.container {
+  padding: 1.5rem;
+  margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}

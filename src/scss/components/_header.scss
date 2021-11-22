@@ -1,0 +1,45 @@
+header {
+  background-image: url(../images/mobile/image-hero.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  height: 1.5rem;
+  z-index: 2000;
+  position: absolute;
+  // left: 1rem;
+  // top: 2rem;
+}
+
+.primary-navigation {
+  position: fixed;
+  display: none;
+  margin: 0;
+  z-index: 100;
+  background: black;
+  inset: 0 0 0 0;
+  padding: min(20rem, 25vh) 2rem;
+}
+
+.mobile-nav-toggle {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  right: 1.8rem;
+  top: 1.8rem;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  background-image: url(../images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+}
+
+.hero {
+  border: 2px solid var(--white);
+  padding: 1rem;
+  margin: 11rem 0;
+}
+
+// .nav-controls {
+//   margin: 10rem;
+// }

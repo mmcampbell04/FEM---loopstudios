@@ -1,0 +1,31 @@
+@use "./colors";
+@use "~sass-rem" as rem;
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-titles);
+  font-weight: 300;
+}
+
+h1 {
+  line-height: 1.1;
+  font-size: rem.convert(42px);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+// text colours
+.ff-white {
+  color: var(--white);
+}
+
+.ff-gray {
+  color: var(--darkGray);
+}
+.ff-darkGray {
+  color: var(--veryDarkGray);
+}
