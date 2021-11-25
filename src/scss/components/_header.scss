@@ -1,45 +1,79 @@
+@use "~sass-rem" as rem;
+@use "../utils/" as *;
+
 header {
   background-image: url(../images/mobile/image-hero.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
+  min-height: 50vh;
+
+  @include breakpoint-up(large) {
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+  }
+}
+
+nav {
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  height: 1.5rem;
+  flex: 1 0 auto;
   z-index: 2000;
-  position: absolute;
-  // left: 1rem;
-  // top: 2rem;
 }
 
-.primary-navigation {
-  position: fixed;
-  display: none;
-  margin: 0;
-  z-index: 100;
-  background: black;
-  inset: 0 0 0 0;
-  padding: min(20rem, 25vh) 2rem;
+.primary-navigation li {
+  margin-left: clamp(1rem, 1vw + 1rem, 2.5rem);
 }
-
 .mobile-nav-toggle {
-  display: block;
-  position: absolute;
-  z-index: 2000;
-  right: 1.8rem;
-  top: 1.8rem;
-  width: 1.5rem;
-  aspect-ratio: 1;
-  background-image: url(../images/icon-hamburger.svg);
-  background-repeat: no-repeat;
+  display: none;
+}
+
+// MOBILE MENU
+@media (max-width: 35em) {
+  .primary-navigation {
+    position: fixed;
+    margin: 0;
+    z-index: 100;
+    flex-direction: column;
+    background: black;
+    inset: 0 0 0 0;
+    padding: min(20rem, 25vh) 2rem;
+    transform: translateY(-100%);
+    // transition: transform 500ms ease-in-out;
+  }
+
+  .primary-navigation li {
+    text-transform: uppercase;
+    font-size: rem.convert(26px);
+    padding-top: 3rem;
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1.8rem;
+    top: 3rem;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    background-image: url(../images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+  background-image: url(../images/icon-close.svg);
 }
 
 .hero {
   border: 2px solid var(--white);
-  padding: 1rem;
-  margin: 11rem 0;
+  margin: 8.5rem 0;
+  padding: 2rem;
+  width: clamp(22rem, 50vw + 1rem, 39rem);
 }
-
-// .nav-controls {
-//   margin: 10rem;
-// }
