@@ -6,6 +6,7 @@ header {
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: 50vh;
+  color: var(--white);
 
   @include breakpoint-up(large) {
     background-image: url(../images/desktop/image-hero.jpg);
@@ -19,7 +20,7 @@ nav {
 }
 
 .logo {
-  flex: 1 0 auto;
+  // flex: 1 0 auto;
   z-index: 2000;
 }
 
@@ -74,6 +75,9 @@ nav {
 .hero {
   border: 2px solid var(--white);
   margin: 8.5rem 0;
-  padding: 2rem;
-  width: clamp(22rem, 50vw + 1rem, 39rem);
+  padding: 2rem 2.25rem 2rem 1.5rem;
+
+  @include breakpoint-up(medium) {
+    width: clamp(27rem, 50vw + 1rem, 42rem);
+  }
 }
