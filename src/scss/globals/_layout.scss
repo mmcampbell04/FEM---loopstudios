@@ -5,10 +5,6 @@
   display: flex;
 }
 
-.btwn {
-  justify-content: space-between;
-}
-
 .grid {
   display: grid;
 }
@@ -22,8 +18,9 @@
 }
 
 .container {
-  padding: 1.5rem;
-  margin-inline: auto;
+  margin: 0 auto;
+  width: clamp(16rem, 80vw, 74rem);
+  padding: clamp(1.5rem, 7vw + 1rem, 3.5rem) 0;
 }
 
 .sr-only {
@@ -36,16 +33,4 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
-}
-
-.hide-for-mobile {
-  @include breakpoint-down(small) {
-    display: none;
-  }
-}
-
-.hide-for-desktop {
-  @include breakpoint-up(medium) {
-    display: none;
-  }
 }
