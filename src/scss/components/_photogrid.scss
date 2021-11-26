@@ -1,0 +1,17 @@
+@use "~sass-rem" as rem;
+@use "../utils/" as *;
+
+.grid-container {
+  row-gap: 1rem;
+}
+.grid-image {
+  position: relative;
+}
+
+.grid-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  max-width: 15ch;
+  padding-right: 4rem;
+}

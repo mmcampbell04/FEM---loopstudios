@@ -1,0 +1,35 @@
+@use "~sass-rem" as rem;
+@use "../utils/" as *;
+
+.overview {
+  @include breakpoint-up(medium) {
+    position: relative;
+  }
+}
+
+.overview-image {
+  @include breakpoint-up(large) {
+    width: 64%;
+  }
+}
+
+.overview-text {
+  margin-top: 3rem;
+  text-align: center;
+
+  @include breakpoint-up(large) {
+    position: absolute;
+    background: var(--white);
+    text-align: left;
+    margin: 0;
+    bottom: 0;
+    left: 50%;
+    padding-inline: 3rem 4rem;
+    padding-block: 3rem 0.5rem;
+    width: 56ch;
+  }
+
+  @include breakpoint-up(xlarge) {
+    padding: 4rem 0 0.5rem 4rem;
+  }
+}
