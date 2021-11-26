@@ -9,17 +9,9 @@
   display: grid;
 }
 
-.d-block {
-  display: block;
-}
-
-.d-none {
-  display: none;
-}
-
 .container {
   margin: 0 auto;
-  width: clamp(16rem, 80vw, 74rem);
+  width: clamp(16rem, 80vw, 110rem);
   padding: clamp(1.5rem, 7vw + 1rem, 3.5rem) 0;
 }
 
@@ -33,4 +25,9 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+// SECTIONS
+section {
+  margin-top: 1.5rem;
 }
