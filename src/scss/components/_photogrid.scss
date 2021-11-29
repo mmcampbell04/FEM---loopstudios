@@ -1,8 +1,29 @@
 @use "~sass-rem" as rem;
 @use "../utils/" as *;
 
+.photo-grid {
+  margin-block: 3rem;
+
+  @include breakpoint-up(large) {
+    margin-block: 9rem 6rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1fr;
+
+    > h2 {
+      place-self: start;
+    }
+  }
+}
+
 .grid-container {
+  margin-block: 3rem;
   row-gap: 1rem;
+
+  @include breakpoint-up(large) {
+    grid-column: 1/3;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
 }
 .grid-image {
   position: relative;
@@ -12,6 +33,27 @@
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  max-width: 15ch;
+  max-width: 18ch;
   padding-right: 4rem;
+
+  @include breakpoint-up(large) {
+    max-width: 23ch;
+    bottom: 2.75rem;
+    left: 2.75rem;
+  }
+
+  .grid-text--grid {
+    @include breakpoint-up(large) {
+      padding-right: 2rem;
+    }
+  }
+}
+
+.photo-btn {
+  @include breakpoint-up(large) {
+    margin: 0;
+    place-self: end;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
