@@ -1,9 +1,22 @@
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .btn {
   text-transform: uppercase;
   border: 1px solid var(--black);
   background: var(--white);
   color: var(--veryDarkGray);
   letter-spacing: 2px;
-  padding: 0.25rem 3rem;
+  padding: 0.5rem 3rem;
   margin: 0 auto;
+  transition: color 0.2s, transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--black);
+  color: var(--white);
 }
