@@ -1,0 +1,2 @@
+console.log("yoo what up pal?");const t=document.querySelector(".mobile-nav-toggle"),e=document.querySelector(".primary-navigation");t.addEventListener("click",(()=>{const a=e.getAttribute("data-visible");"false"===a?(e.setAttribute("data-visible",!0),t.setAttribute("aria-expanded",!0)):(e.setAttribute("data-visible",!1),t.setAttribute("aria-expanded",!1)),console.log(a)}));
+//# sourceMappingURL=index.ad9102aa.js.map
